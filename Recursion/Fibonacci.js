@@ -5,24 +5,11 @@
 // fib(28) // 317811
 // fib(35) // 9227465
 
-let sum = 0;
-let i = 1;
-let j = 1;
-let count = 1;
-function fibonacci(number) {
-    sum = i + j
-    count++;
-    function fib() {
-        if (count === number) {
-            return number;
-        }
-        count++;
-        sum = sum + fib()
-        console.log("🚀 ~ fib ~ sum:", sum)
-        return sum
+function fibonacci(num) {
+    if (num <= 2) {
+        return 1
     }
-
-    return fib()
+    return fibonacci(num - 1) + fibonacci(num - 2)
 }
 
 console.log(fibonacci(4))
